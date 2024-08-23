@@ -29,7 +29,7 @@ def contact(request):
                 email,
                 ["privateworkprovider@gmail.com"],
             )
-            return redirect("home")
+            return redirect("properties:home")
     else:
         form = ContactForm()
 
