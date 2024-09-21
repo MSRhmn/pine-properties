@@ -3,17 +3,22 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-<h1>Contact</h1>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Get in Touch</h1>
 
-<nav>
-    <a href="{% url 'properties:home' %}">Home</a>
-    <a href="{% url 'properties:properties' %}">Properties</a>
-    <a href="{% url 'properties:contact' %}">Contact</a>
-</nav>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Send</button>
-</form>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" class="shadow p-4 rounded bg-light">
+                {% csrf_token %}
+                
+                <!-- Render the form fields with Bootstrap styling -->
+                {{ form.as_p }}
+                
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
