@@ -3,11 +3,15 @@
 {% block title %}Pine Properties Home{% endblock %}
 
 {% block content %}
-    <h1>Welcome to Pine Properties</h1>
-
-    <nav>
-        <a href="{% url 'properties:home' %}">Home</a>
-        <a href="{% url 'properties:properties' %}">Properties</a>
-        <a href="{% url 'properties:contact' %}">Contact</a>
-    </nav>
+ <!-- Hero Section -->
+ <div class="container mt-5">
+    <div class="jumbotron text-center bg-light p-5 rounded">
+        <h1 class="display-4">Welcome to Pine Properties</h1>
+        <p class="lead">Find your dream home with us. We offer a wide selection of properties at competitive prices.</p>
+        <hr class="my-4">
+        <p>Explore our listings to find a property that suits your needs, or get in touch with us for more information.</p>
+        <a class="btn btn-primary btn-lg me-2" href="{% url 'properties:properties' %}" role="button">View Properties</a>
+        <a class="btn btn-secondary btn-lg" href="{% url 'properties:contact' %}" role="button">Contact Us</a>
+    </div>
+</div>
 {% endblock %}
