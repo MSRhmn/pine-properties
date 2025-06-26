@@ -9,7 +9,7 @@
         {% for property in properties %}
         <div class="col-md-4 mb-4">
             <div class="card h-100">
-                <img src="{{ property.image.url }}" class="card-img-top" alt="{{ property.title }}">
+                <img src="{{ property.image.url }}" class="card-img-top" alt="{{ property.title }}" style="height: 300px; object-fit:cover">
                 <div class="card-body">
                     <h5 class="card-title">{{ property.title }}</h5>
                     <p class="card-text">{{ property.description|truncatewords:20 }}</p>
@@ -17,7 +17,7 @@
                     <p class="card-text"><strong>Location:</strong> {{ property.location }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary btn-block">View Details</a>
+                    <a href="#" class="btn btn-primary w-100">View Details</a>
                 </div>
             </div>
         </div>
