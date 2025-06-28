@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 from django.conf import settings
@@ -14,6 +14,11 @@ def home(request):
 def properties(request):
     properties = Property.objects.all()
     return render(request, "properties/properties.html", {"properties": properties})
+
+
+def property_detail(request, pk):
+    property = get_object_or_404(Property, pk=pk)
+    return render(request, "properties/property_detail.html", {"property": property})
 
 
 def contact(request):
