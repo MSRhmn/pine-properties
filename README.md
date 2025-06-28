@@ -26,7 +26,7 @@ A responsive, easy-to-use real estate platform built with Django and Bootstrap. 
 ### 2. Create a Virtual Environment
 
   `python -m venv venv`<br>
-  
+
   `source venv/bin/activate`  # On Windows: venv\Scripts\activate
 
 
@@ -34,23 +34,19 @@ A responsive, easy-to-use real estate platform built with Django and Bootstrap. 
 
   `pip install -r requirements.txt`
 
+
 ### 4. Configure Environment Variables
 
-Copy the example environment file and edit .env file with your own email credentials to perform functional contact form:
+Copy the example environment file and edit the `.env` file with your own email credentials to perform functional contact form:
 
   `cp .env.example .env`
 
 
-
-  - EMAIL_HOST_USER=your-email@example.com
-  - EMAIL_HOST_PASSWORD=your-password
-  - CONTACT_EMAIL=recipient@example.com
-
-
-### 4. Apply Migrations
+### 5. Apply Migrations
 
   `python manage.py migrate`
 
-### 5. Run the Development Server
+
+### 6. Run the Development Server
 
   `python manage.py runserver`
