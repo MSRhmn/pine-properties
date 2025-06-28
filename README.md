@@ -19,12 +19,14 @@ A responsive, easy-to-use real estate platform built with Django and Bootstrap. 
 ### 1️. Clone the Repository
 
   `git clone https://github.com/your-username/pine-properties.git`<br>
+
   `cd pine-properties`
 
 
 ### 2. Create a Virtual Environment
 
-  `python -m venv venv`
+  `python -m venv venv`<br>
+  
   `source venv/bin/activate`  # On Windows: venv\Scripts\activate
 
 
