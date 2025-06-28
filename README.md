@@ -18,7 +18,7 @@ A responsive, easy-to-use real estate platform built with Django and Bootstrap. 
 
 ### 1️. Clone the Repository
 
-  `git clone https://github.com/your-username/pine-properties.git`
+  `git clone https://github.com/your-username/pine-properties.git`<br>
   `cd pine-properties`
 
 
@@ -34,11 +34,11 @@ A responsive, easy-to-use real estate platform built with Django and Bootstrap. 
 
 ### 4. Configure Environment Variables
 
-Copy the example environment file:
+Copy the example environment file and edit .env file with your own email credentials to perform functional contact form:
 
   `cp .env.example .env`
 
-Edit `.env` file with your own email credentials to perform functional contact form:
+
 
   - EMAIL_HOST_USER=your-email@example.com
   - EMAIL_HOST_PASSWORD=your-password
