@@ -139,6 +139,11 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
 CONTACT_EMAIL = env("CONTACT_EMAIL", default="")
 
+# Optional: Warn if critical values missing
+if not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD:
+    print("⚠️  Warning: Email credentials not set. Contact form may not work.")
+
+
 # Configure of media files
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
