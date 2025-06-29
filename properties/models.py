@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 
 
 class Property(models.Model):
@@ -10,3 +11,15 @@ class Property(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        
+        if self.image:
+            try:
+                img = Image.open(self.image.path)
+                if img.height > 600 or img.width > 800:
+                    img.thumbnail((800, 600), Image.Resampling.LANCZOS)
+                    img.save(self.image.path, optimize=True, quality=85)
+            except Exception:
+                pass  # Ignore errors, just save without resizing
