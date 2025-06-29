@@ -1,0 +1,21 @@
+{% extends "properties/base.html" %}
+
+{% block title %}{{ property.title }} | Pine Properties{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ property.image.url }}" alt="{{ property.title }}" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h1>{{ property.title }}</h1>
+            <p class="lead"><strong>Price:</strong> ${{ property.price }}</p>
+            <p><strong>Location:</strong> {{ property.location }}</p>
+            <hr>
+            <p>{{ property.description }}</p>
+            <a href="{% url 'properties:contact' %}" class="btn btn-primary mt-3">Contact Us About This Property</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
