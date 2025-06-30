@@ -37,14 +37,15 @@ A responsive, easy-to-use real estate platform built with Django and Bootstrap. 
 
 ### 4. Configure Environment Variables
 
-Copy the example environment file and edit the `.env` file with your own email credentials to perform functional contact form:
+Copy the example environment file into `.env` and edit the `.env` file with your own email credentials to perform functional contact form:
 
   `cp .env.example .env`
 
 
-### 5. Apply Migrations
+### 5. Apply Migrations and Load Data
 
-  `python manage.py migrate`
+  `python manage.py migrate`<br>
+  `python manage.py loaddata fixtures/sample_properties.json`
 
 
 ### 6. Run the Development Server
