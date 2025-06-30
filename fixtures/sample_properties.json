@@ -1,0 +1,57 @@
+[
+{
+  "model": "properties.property",
+  "pk": 2,
+  "fields": {
+    "title": "Charming Cottage in the Heart of Old Town",
+    "description": "This delightful two-bedroom cottage offers a peaceful retreat in the heart of Old Town. With its cozy living room, updated kitchen, and charming backyard, this home is perfect for those seeking a quiet and comfortable lifestyle.",
+    "price": "350000.00",
+    "location": "123 Main Street, Old Town, Anytown, USA",
+    "image": "properties/Gemini_Generated_Image_egslw0egslw0egsl.jpeg"
+  }
+},
+{
+  "model": "properties.property",
+  "pk": 3,
+  "fields": {
+    "title": "Modern Farmhouse with Acreage",
+    "description": "This stunning modern farmhouse offers the perfect blend of rustic charm and contemporary style. Situated on a spacious 5-acre lot, the property features beautiful landscaping, a pool, and a detached garage.",
+    "price": "750000.00",
+    "location": "456 Country Road, Ruralville, Anystate, USA",
+    "image": "properties/Gemini_Generated_Image_egslw1egslw1egsl.jpeg"
+  }
+},
+{
+  "model": "properties.property",
+  "pk": 4,
+  "fields": {
+    "title": "Penthouse Suite with City Views",
+    "description": "This luxurious penthouse suite offers breathtaking panoramic views of the city skyline. With high-end finishes, gourmet kitchen, and private balcony, this is the ultimate urban retreat.",
+    "price": "2000000.00",
+    "location": "789 Tower Drive, City Center, Anycity, USA",
+    "image": "properties/Gemini_Generated_Image_iv144eiv144eiv14.jpeg"
+  }
+},
+{
+  "model": "properties.property",
+  "pk": 5,
+  "fields": {
+    "title": "Modern Family Home",
+    "description": "This stunning modern home offers spacious living with an open-concept design, four bedrooms, three bathrooms, and a two-car garage. Enjoy the beautifully landscaped garden and a private backyard perfect for entertaining. Located in a family-friendly neighborhood with excellent schools and amenities nearby.",
+    "price": "750000.00",
+    "location": "123 Green Valley Drive, Suburbia, USA",
+    "image": "properties/Gemini_Generated_Image_5254qn5254qn5254.png"
+  }
+},
+{
+  "model": "properties.property",
+  "pk": 6,
+  "fields": {
+    "title": "Cozy City Apartment",
+    "description": "Discover comfort and style in this charming one-bedroom, one-bathroom apartment. Featuring abundant natural light, a cozy living area, and a modern kitchen. Ideal for singles or couples, this unit is situated in the heart of the city, close to public transport, vibrant nightlife, and dining options.",
+    "price": "350000.00",
+    "location": "Apt 4B, 456 Urban Loft Building, Metropolis, USA",
+    "image": "properties/Gemini_Generated_Image_5254qm5254qm5254.png"
+  }
+}
+]
