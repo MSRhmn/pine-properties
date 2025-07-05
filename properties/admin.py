@@ -18,5 +18,4 @@ class PropertyAdmin(admin.ModelAdmin):
             )
         return "(No image)"
 
-    image_preview.allow_tags = True
     image_preview.short_description = "Image Preview"
