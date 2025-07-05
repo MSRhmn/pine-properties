@@ -14,7 +14,7 @@ class Property(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-        
+
         if self.image:
             try:
                 img = Image.open(self.image.path)
