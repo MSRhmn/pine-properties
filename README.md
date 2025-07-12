@@ -51,3 +51,9 @@ Copy the example environment file into `.env` and edit the `.env` file with your
 ### 6. Run the Development Server
 
   `python manage.py runserver`
+
+
+## License
+
+© 2025 Md. Shamim Rahman<br>
+This project is licensed under the [MIT License](LICENSE).
