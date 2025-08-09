@@ -17,12 +17,8 @@ class Property(models.Model):
     ]
 
     title = models.CharField(max_length=200)
-    property_type = models.CharField(
-        max_length=20, choices=PROPERTY_TYPES, default="house"
-    )
-    listing_type = models.CharField(
-        max_length=10, choices=LISTING_TYPES, default="sale"
-    )
+    property_type = models.CharField(max_length=20, choices=PROPERTY_TYPES)
+    listing_type = models.CharField(max_length=10, choices=LISTING_TYPES)
     location = models.CharField(max_length=200)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
