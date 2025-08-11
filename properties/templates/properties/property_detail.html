@@ -14,6 +14,8 @@
             <p><strong>Location:</strong> {{ property.location }}</p>
             <hr>
             <p>{{ property.description }}</p>
+            <p><strong>Property Type:</strong> {{ property.get_property_type_display }}</p>
+            <p><strong>Listing Type:</strong> {{ property.get_listing_type_display }}</p>
             <a href="{% url 'properties:contact' %}" class="btn btn-primary mt-3">Contact Us About This Property</a>
         </div>
     </div>
