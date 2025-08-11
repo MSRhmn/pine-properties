@@ -6,9 +6,9 @@ from .models import Property
 
 @admin.register(Property)
 class PropertyAdmin(admin.ModelAdmin):
-    list_display = ("title", "location", "price", "image_preview")
+    list_display = ("title", "location", "price", "image_preview", "property_type", "listing_type", "is_available")
     search_fields = ("title", "location")
-    list_filter = ("location", "price")
+    list_filter = ("property_type", "listing_type", "is_available")
     readonly_fields = ("image_preview",)
 
     def image_preview(self, obj):
