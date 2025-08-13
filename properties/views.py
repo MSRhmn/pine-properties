@@ -28,7 +28,7 @@ def properties(request):
         "listing_types": Property.LISTING_TYPES,
     }
 
-    return render(request, "properties/properties.html", {"properties": properties})
+    return render(request, "properties/properties.html", context)
 
 
 def property_detail(request, pk):
