@@ -12,7 +12,22 @@ def home(request):
 
 
 def properties(request):
+    property_type = request.GET.get("property_type")
+    listing_type = request.GET.get("listing_type")
+
     properties = Property.objects.all()
+
+    if property_type:
+        properties = properties.filter(property_type=property_type)
+    if listing_type:
+        properties = properties.filter(listing_type=listing_type)
+
+    context = {
+        "properties": properties,
+        "property_types": Property.PROPERTY_TYPES,
+        "listing_types": Property.LISTING_TYPES,
+    }
+
     return render(request, "properties/properties.html", {"properties": properties})
 
 
