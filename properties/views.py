@@ -15,9 +15,14 @@ def properties(request):
     # Base query: only available properties, newest first
     properties = Property.objects.filter(is_available=True).order_by("-date_listed")
 
+    # Filtering
     property_type = request.GET.get("property_type")
     listing_type = request.GET.get("listing_type")
-
+    min_price = request.GET.get("min_price")
+    max_price = request.GET.get("max_price")
+    bedrooms = request.GET.get("bedrooms")
+    bathrooms = request.GET.get("bathrooms")
+    location = request.GET.get("location")
 
     if property_type:
         properties = properties.filter(property_type=property_type)
