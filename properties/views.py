@@ -12,10 +12,12 @@ def home(request):
 
 
 def properties(request):
+    # Base query: only available properties, newest first
+    properties = Property.objects.filter(is_available=True).order_by("-date_listed")
+
     property_type = request.GET.get("property_type")
     listing_type = request.GET.get("listing_type")
 
-    properties = Property.objects.all()
 
     if property_type:
         properties = properties.filter(property_type=property_type)
