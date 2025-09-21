@@ -28,6 +28,14 @@ def properties(request):
         properties = properties.filter(property_type=property_type)
     if listing_type:
         properties = properties.filter(listing_type=listing_type)
+    if min_price:
+        properties = properties.filter(price__gte=min_price)
+    if max_price:
+        properties = properties.filter(price__lte=max_price)
+    if bedrooms:
+        properties = properties.filter(bedrooms=bedrooms)
+    if location:
+        properties = properties.filter(location=location)
 
     context = {
         "properties": properties,
