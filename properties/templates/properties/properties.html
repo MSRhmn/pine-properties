@@ -10,7 +10,7 @@
     <div class="row g-3 align-items-center">
       <div class="col-auto">
         <select name="property_type" class="form-select">
-          <option value="">All Property Types</option>
+          <option value="">Property Types</option>
           {% for key, label in property_types %}
             <option value="{{ key }}" {% if request.GET.property_type == key %}selected{% endif %}>
               {{ label }}
@@ -20,7 +20,7 @@
       </div>
       <div class="col-auto">
         <select name="listing_type" class="form-select">
-          <option value="">All Listing Types</option>
+          <option value="">Listing Types</option>
           {% for key, label in listing_types %}
             <option value="{{ key }}" {% if request.GET.listing_type == key %}selected{% endif %}>
               {{ label }}
