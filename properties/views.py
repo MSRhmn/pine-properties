@@ -35,6 +35,8 @@ def properties(request):
         properties = properties.filter(price__lte=max_price)
     if bedrooms:
         properties = properties.filter(bedrooms=bedrooms)
+    if bathrooms:
+        properties = properties.filter(bathrooms=bathrooms)
     if location:
         properties = properties.filter(location=location)
 
