@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import EmailMessage
+from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.conf import settings
 
@@ -37,10 +38,16 @@ def properties(request):
     if location:
         properties = properties.filter(location=location)
 
+    # Pagination
+    paginator = Paginator(properties, 6)  # Show 6 properties per page
+    page_number = request.GET.get("page")
+    properties_page = paginator.get_page(page_number)
+
     context = {
-        "properties": properties,
+        "properties": properties_page,
         "property_types": Property.PROPERTY_TYPES,
         "listing_types": Property.LISTING_TYPES,
+        "paginator": paginator,
     }
 
     return render(request, "properties/properties.html", context)
