@@ -9,7 +9,12 @@ from .forms import ContactForm
 
 
 def home(request):
-    return render(request, "properties/home.html")
+    featured_properties = Property.objects.filter(is_available=True).order_by(
+        "-date_listed"
+    )[:3]
+    return render(
+        request, "properties/home.html", {"featured_properties": featured_properties}
+    )
 
 
 def properties(request):
