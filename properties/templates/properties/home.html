@@ -14,4 +14,35 @@
         <a class="btn btn-secondary btn-lg" href="{% url 'properties:contact' %}" role="button">Contact Us</a>
     </div>
 </div>
+
+<!-- Featured Properties Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Latest Properties</h2>
+  <div class="row">
+    {% for property in featured_properties %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="{{ property.image.url }}" class="card-img-top" alt="{{ property.title }}" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{ property.title }}</h5>
+            <p class="card-text text-muted mb-1"><strong>Type:</strong> {{ property.get_property_type_display }}</p>
+            <p class="card-text text-muted mb-1"><strong>Listing:</strong> {{ property.get_listing_type_display }}</p>
+            <p class="card-text"><strong>Price:</strong> ${{ property.price }}</p>
+          </div>
+          <div class="card-footer bg-white">
+            <a href="{% url 'properties:property_detail' property.pk %}" class="btn btn-primary w-100">
+              View Details
+            </a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-center text-muted">No properties available right now. Please check back soon!</p>
+    {% endfor %}
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="{% url 'properties:properties' %}" class="btn btn-primary btn-lg">View All Properties</a>
+  </div>
+</div>
 {% endblock %}
