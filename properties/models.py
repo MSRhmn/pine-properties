@@ -43,3 +43,31 @@ class Property(models.Model):
                     img.save(self.image.path, optimize=True, quality=85)
             except Exception:
                 pass  # Ignore errors, just save without resizing
+
+
+class Inquiry(models.Model):
+    STATUS_CHOICES = [
+        ("new", "New"),
+        ("in_progress", "In Progress"),
+        ("closed", "Closed"),
+    ]
+    property_obj = models.ForeignKey(
+        "Property",
+        on_delete=models.CASCADE,
+        related_name="inquiries",
+        null=True,
+        blank=True,
+    )
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20, blank=True)
+    message = models.TextField()
+    submitted_at = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="new")
+
+    class Meta:
+        ordering = ["-submitted_at"]
+
+    def __str__(self):
+        if self.property_obj:
+            return f"Inquiry for {self.property_obj.title} by {self.name}"
