@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.conf import settings
 
-from .models import Property
+from .models import Property, Inquiry
 from .forms import ContactForm
 
 
@@ -65,18 +65,45 @@ def property_detail(request, pk):
     return render(request, "properties/property_detail.html", {"property": property})
 
 
-def contact(request):
+def contact(request, property_id=None):
+    """Handles both general contact and property-specific inquiries."""
+    related_property = None
+
+    if property_id:
+        related_property = get_object_or_404(Property, id=property_id)
+
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data["name"]
-            email = form.cleaned_data["email"]
-            message = form.cleaned_data["message"]
+            # Save inquiry in database
+            inquiry = Inquiry.objects.create(
+                property_obj=related_property,
+                name=form.cleaned_data["name"],
+                email=form.cleaned_data["email"],
+                phone=form.cleaned_data.get("phone", ""),
+                message=form.cleaned_data["message"],
+            )
+
+            # Send email notification
+            subject = (
+                f"Inquiry for {related_property.title}"
+                if related_property
+                else "General contact"
+            )
+            email_body = (
+                f"Name: {inquiry.name}\n"
+                f"Email: {inquiry.email}\n"
+                f"Phone: {inquiry.phone}\n\n"
+                f"Message:\n{inquiry.message}"
+            )
+
+            if related_property:
+                email_body = f"Property: {related_property.title}\n\n{email_body}"
 
             # The email sending logic
             email_message = EmailMessage(
                 subject=f"Contact Form Submission from {name}",
-                body=message,
+                body=email_body,
                 from_email=settings.EMAIL_HOST_USER,
                 to=[settings.CONTACT_EMAIL],
                 reply_to=[email],
