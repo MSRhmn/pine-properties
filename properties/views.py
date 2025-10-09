@@ -74,6 +74,7 @@ def contact(request, property_id=None):
 
     if request.method == "POST":
         form = ContactForm(request.POST)
+
         if form.is_valid():
             # Save inquiry in database
             inquiry = Inquiry.objects.create(
