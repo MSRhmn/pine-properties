@@ -3,6 +3,7 @@ from django.core.mail import EmailMessage
 from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.conf import settings
+from django.contrib import messages
 
 from .models import Property, Inquiry
 from .forms import ContactForm
@@ -112,9 +113,13 @@ def contact(request, property_id=None):
 
             try:
                 email_message.send()
+                messages.success(request, "Thank you! Your inquiry has been sent.")
             except Exception as e:
-                return HttpResponse(f"Failed to send email: {e}")
-
+                # Inquiry is still saved in db just email failed.
+                messages.warning(
+                    request, "Inquiry saved, but email notification failed."
+                )
+                print(f"Email error: {e}")  # Log for debugging
             return redirect("properties:home")
     else:
         form = ContactForm()
