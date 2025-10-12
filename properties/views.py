@@ -103,7 +103,7 @@ def contact(request, property_id=None):
 
             # The email sending logic
             email_message = EmailMessage(
-                subject=f"Contact Form Submission from {name}",
+                subject=subject,
                 body=email_body,
                 from_email=settings.EMAIL_HOST_USER,
                 to=[settings.CONTACT_EMAIL],
