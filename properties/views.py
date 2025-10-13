@@ -108,7 +108,7 @@ def contact(request, property_id=None):
                 body=email_body,
                 from_email=settings.EMAIL_HOST_USER,
                 to=[settings.CONTACT_EMAIL],
-                reply_to=[email],
+                reply_to=[inquiry.email],
             )
 
             try:
