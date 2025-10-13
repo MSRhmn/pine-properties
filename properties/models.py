@@ -71,3 +71,4 @@ class Inquiry(models.Model):
     def __str__(self):
         if self.property_obj:
             return f"Inquiry for {self.property_obj.title} by {self.name}"
+        return f"General inquiry by {self.name}"
