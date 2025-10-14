@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import mark_safe
 
-from .models import Property
+from .models import Property, Inquiry
 
 
 @admin.register(Property)
@@ -27,3 +27,38 @@ class PropertyAdmin(admin.ModelAdmin):
         return "(No image)"
 
     image_preview.short_description = "Image Preview"
+
+
+@admin.register(Inquiry)
+class InquiryAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "email",
+        "phone",
+        "property_link",
+        "status",
+        "submitted_at",
+    )
+    list_filter = ("status", "submitted_at")
+    search_fields = ("name", "email", "phone", "message")
+    readonly_fields = ("submitted_at", "property_link")
+    ordering = ("-submitted_at",)
+
+    fieldsets = (
+        ("Contact Information", {"fields": ("name", "email", "phone")}),
+        (
+            "Inquiry Details",
+            {"fields": ("property_obj", "property_link", "message", "status")},
+        ),
+        ("Metadata", {"fields": ("submitted_at",)}),
+    )
+
+    def property_link(self, obj):
+        if obj.property_obj:
+            return mark_safe(
+                f"<a href='admin/properties/property/{obj.property_obj.id}/change/'>"
+                f"{obj.property_obj.title}</a>"
+            )
+        return "General Inquiry"
+
+    property_link.short_description = "Related Property"
