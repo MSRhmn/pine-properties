@@ -29,10 +29,11 @@
             <p class="card-text text-muted mb-1"><strong>Listing:</strong> {{ property.get_listing_type_display }}</p>
             <p class="card-text"><strong>Price:</strong> ${{ property.price }}</p>
           </div>
-          <div class="card-footer bg-white">
-            <a href="{% url 'properties:property_detail' property.pk %}" class="btn btn-primary w-100">
+          <div class="card-footer bg-white d-flex gap-2">
+            <a href="{% url 'properties:property_detail' property.pk %}" class="btn btn-primary w-100 flex-fill">
               View Details
             </a>
+            <a href="{% url 'properties:contact' property.pk %}" class="btn btn-outline-success w-100 flex-fill">Inquire Property</a>
           </div>
         </div>
       </div>
