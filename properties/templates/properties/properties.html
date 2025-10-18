@@ -59,9 +59,9 @@
             <img src="{{ property.image.url }}" class="card-img-top" alt="{{ property.title }}" style="height: 300px; object-fit:cover">
             <div class="card-body">
                 <h5 class="card-title">{{ property.title }}</h5>
-                <p class="card-text">{{ property.description|truncatewords:12 }}</p>
+                <p class="card-text text-muted mb-1"><strong>Type:</strong> {{ property.get_property_type_display }}</p>
+                <p class="card-text text-muted mb-1"><strong>Listing:</strong> {{ property.get_listing_type_display }}</p>
                 <p class="card-text"><strong>Price:</strong> ${{ property.price }}</p>
-                <p class="card-text"><strong>Location:</strong> {{ property.location }}</p>
             </div>
             <div class="card-footer d-flex gap-2">
                 <a href="{% url 'properties:property_detail' property.pk %}" class="btn btn-primary w-100 flex-fill">View Details</a>
