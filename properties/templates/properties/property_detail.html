@@ -16,7 +16,10 @@
             <h3 class="text-success">${{ property.price|floatformat:2 }}</h3>
             <hr>
             <p>{{ property.description }}</p>
-            <a href="{% url 'properties:contact' property.pk %}" class="btn btn-primary mt-3">Contact Us About This Property</a>
+            <div class="card-footer">
+              <small class="text-muted">Listed on {{ property.date_listed|date:"M d, Y" }}</small>
+            </div>
+            <a href="{% url 'properties:contact' property.pk %}" class="btn btn-primary mt-3">Contact Us About This Property</a>  
         </div>
     </div>
 </div>
