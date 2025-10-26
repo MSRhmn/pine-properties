@@ -56,7 +56,7 @@ class InquiryAdmin(admin.ModelAdmin):
     def property_link(self, obj):
         if obj.property_obj:
             return mark_safe(
-                f"<a href='admin/properties/property/{obj.property_obj.id}/change/'>"
+                f"<a href='/admin/properties/property/{obj.property_obj.id}/change/'>"
                 f"{obj.property_obj.title}</a>"
             )
         return "General Inquiry"
