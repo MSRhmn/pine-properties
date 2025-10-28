@@ -10,11 +10,17 @@
         body {
             padding-top: 50px;
         }
+        .navbar-custom {
+            background-color: #C2E2FA; /* Bootstrap primary blue */
+        }
+        .jumbo-custom {
+          background-color: #dff9fb;
+        }
     </style>
 </head>
 <body class="d-flex flex-column h-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{% url 'properties:home' %}">Pine Properties</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
