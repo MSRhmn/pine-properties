@@ -70,6 +70,27 @@
             border-color: #3c6382;
             color: #fff;
         }
+
+        /* Soft rounded inputs */
+        .form-control, .form-select {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.875rem 1rem;
+            background-color: #fafafa;
+            box-shadow: none;
+            transition: all 0.2s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: #10b981;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+            outline: none;
+        }
+        
+        .form-control:hover, .form-select:hover {
+            border-color: #d1d5db;
+        }
     </style>
 </head>
 <body class="d-flex flex-column h-100">
