@@ -3,16 +3,50 @@
 {% block title %}Pine Properties Home{% endblock %}
 
 {% block content %}
- <!-- Hero Section -->
- <div class="container mt-5">
-    <div class="jumbotron text-center p-5 rounded jumbo-custom">
-        <h1 class="display-4">Welcome to Pine Properties</h1>
-        <p class="lead">Find your dream home with us. We offer a wide selection of properties at competitive prices.</p>
-        <hr class="my-4">
-        <p>Explore our listings to find a property that suits your needs, or get in touch with us for more information.</p>
-        <a class="btn btn-primary btn-lg me-2" href="{% url 'properties:properties' %}" role="button">View Properties</a>
-        <a class="btn btn-secondary btn-lg" href="{% url 'properties:contact' %}" role="button">Contact Us</a>
-    </div>
+<!-- Modern Hero Section -->
+<div class="hero-section py-5 mb-5">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-6">
+              <h1 class="display-3 fw-bold mb-4">Find Your Dream Home</h1>
+              <p class="lead mb-4">Discover the perfect property that matches your lifestyle. Browse our curated collection of homes, apartments, and commercial spaces.</p>
+              <div class="d-flex gap-3 flex-wrap">
+                  <a class="btn btn-primary btn-lg px-4" href="{% url 'properties:properties' %}">Browse Properties</a>
+                  <a class="btn btn-outline-secondary btn-lg px-4" href="{% url 'properties:contact' %}">Get in Touch</a>
+              </div>
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0">
+              <div class="hero-stats">
+                  <div class="row g-3">
+                      <div class="col-6">
+                          <div class="stat-card p-4 bg-light rounded-3 text-center">
+                              <h3 class="display-6 fw-bold text-primary mb-0">500+</h3>
+                              <p class="text-muted mb-0">Properties</p>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                          <div class="stat-card p-4 bg-light rounded-3 text-center">
+                              <h3 class="display-6 fw-bold text-success mb-0">1000+</h3>
+                              <p class="text-muted mb-0">Happy Clients</p>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                          <div class="stat-card p-4 bg-light rounded-3 text-center">
+                              <h3 class="display-6 fw-bold text-primary mb-0">50+</h3>
+                              <p class="text-muted mb-0">Cities</p>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                          <div class="stat-card p-4 bg-light rounded-3 text-center">
+                              <h3 class="display-6 fw-bold text-success mb-0">15+</h3>
+                              <p class="text-muted mb-0">Years Experience</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
 <!-- Featured Properties Section -->
