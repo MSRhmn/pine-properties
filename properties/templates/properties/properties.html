@@ -58,6 +58,15 @@
         </div>
     </form>
   </div>
+
+  <!-- Results Count -->
+  {% if properties %}
+  <div class="d-flex justify-content-between align-items-center mb-4">
+      <p class="text-muted mb-0">
+          Showing {{ properties|length }} propert{{ properties|length|pluralize:"y,ies" }}
+      </p>
+  </div>
+  {% endif %}
 </div>
 
 <!-- Properties Grid -->
