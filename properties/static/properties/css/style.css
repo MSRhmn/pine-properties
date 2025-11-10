@@ -134,3 +134,18 @@ main {
 .form-control:hover, .form-select:hover {
   border-color: #d1d5db;
 }
+
+/* Footer Styles */
+footer a {
+  color: #adb5bd;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #3867d6 !important;
+}
+
+footer h5 {
+  font-weight: 600;
+  color: #ffffff;
+}
