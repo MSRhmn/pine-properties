@@ -43,6 +43,40 @@ main {
   margin-bottom: 4rem;
 }
 
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-stats .stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-stats .stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Property Cards */
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.property-card .badge {
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+}
+
+/* CTA Section */
+.cta-section {
+  border-radius: 20px;
+}
+
 /* Primary buttons */
 .btn-primary {
   background-color: #3867d6 !important;
