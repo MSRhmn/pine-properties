@@ -52,10 +52,49 @@
         </div>
     </main>
 
-    <footer class="bg-light text-center py-4 mt-auto">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Pine Properties. All Rights Reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-auto">
+      <div class="container">
+          <div class="row">
+              <!-- Brand Section -->
+              <div class="col-md-4 mb-4 mb-md-0">
+                  <h5 class="mb-3">Pine Properties</h5>
+                  <p>Find your dream home with us. Professional real estate services you can trust.</p>
+              </div>
+    
+              <!-- Quick Links -->
+              <div class="col-md-4 mb-4 mb-md-0">
+                  <h5 class="mb-3">Quick Links</h5>
+                  <ul class="list-unstyled">
+                      <li class="mb-2"><a href="{% url 'properties:home' %}" class="text-decoration-none">Home</a></li>
+                      <li class="mb-2"><a href="{% url 'properties:properties' %}" class="text-decoration-none">Properties</a></li>
+                      <li class="mb-2"><a href="{% url 'properties:contact' %}" class="text-decoration-none">Contact</a></li>
+                  </ul>
+              </div>
+    
+              <!-- Contact Info -->
+              <div class="col-md-4">
+                  <h5 class="mb-3">Get In Touch</h5>
+                  <ul class="list-unstyled">
+                      <li class="mb-2">info@pineproperties.com</li>
+                      <li class="mb-2">+1 (555) 123-4567</li>
+                      <li class="mb-2">123 Real Estate St, City</li>
+                  </ul>
+              </div>
+          </div>
+    
+          <hr class="my-4 bg-secondary">
+    
+          <div class="row">
+              <div class="col-md-6 text-center text-md-start">
+                  <p class="mb-0">&copy; 2025 Pine Properties. All Rights Reserved.</p>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                  <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                  <a href="#" class="text-decoration-none">Terms of Service</a>
+              </div>
+          </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
