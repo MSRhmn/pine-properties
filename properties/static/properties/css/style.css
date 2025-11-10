@@ -2,8 +2,36 @@ body {
   padding-top: 50px;
 }
 
+/* Modern Navbar Styles */
 .navbar-custom {
-  background-color: #C2E2FA;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  color: #3867d6 !important;
+  font-weight: 600;
+}
+
+.navbar-custom .nav-link {
+  color: #2d3436;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  border-radius: 8px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #3867d6;
+}
+
+.navbar-custom .nav-link.btn {
+  padding: 0.5rem 1.5rem !important;
+}
+
+/* Active nav link indicator */
+.navbar-custom .nav-link.active {
+  color: #3867d6;
 }
 
 .jumbo-custom {
