@@ -3,7 +3,16 @@
 {% block title %}{{ property.title }} | Pine Properties{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container">
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'properties:home' %}" class="text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'properties:properties' %}" class="text-decoration-none">Properties</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ property.title|truncatewords:3 }}</li>
+    </ol>
+  </nav>
+
     <div class="row">
         <div class="col-md-6">
             <img src="{{ property.image.url }}" alt="{{ property.title }}" class="img-fluid rounded shadow">
