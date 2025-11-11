@@ -134,6 +134,35 @@
               </a>
           </div>
       </div>
+
+      <!-- Sidebar - Right Column -->
+      <div class="col-lg-4">
+        <!-- Contact Card - Sticky -->
+        <div class="contact-card card border-0 shadow-sm sticky-top" style="top: 90px;">
+            <div class="card-body p-4">
+                <h5 class="card-title fw-bold mb-3">Interested in this property?</h5>
+                <p class="text-muted mb-4">Contact us to schedule a viewing or get more information about this property.</p>
+                
+                <!-- Price Highlight -->
+                <div class="bg-light p-3 rounded-3 mb-4 text-center">
+                    <small class="text-muted d-block mb-1">Price</small>
+                    <h3 class="text-primary fw-bold mb-0">${{ property.price|floatformat:0 }}</h3>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="{% url 'properties:contact' property.pk %}" class="btn btn-success w-100 btn-lg mb-3">
+                    📧 Send Inquiry
+                </a>
+
+                <!-- Additional Info -->
+                <div class="text-center pt-3 border-top">
+                    <small class="text-muted">
+                        Response time: Within 24 hours
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </div>
 {% endblock %}
