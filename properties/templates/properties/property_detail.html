@@ -40,5 +40,42 @@
     </div>
     <h2 class="text-primary fw-bold mb-0">${{ property.price|floatformat:0 }}</h2>
   </div>
+
+  <!-- Property Features -->
+  <div class="features-section bg-light p-4 rounded-3 mb-4">
+    <h5 class="fw-bold mb-3">Property Features</h5>
+    <div class="row g-3">
+        <div class="col-6 col-md-3">
+            <div class="text-center">
+                <div class="fs-3 mb-2">🛏️</div>
+                <div class="fw-bold">{{ property.bedrooms }}</div>
+                <small class="text-muted">Bedrooms</small>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="text-center">
+                <div class="fs-3 mb-2">🚿</div>
+                <div class="fw-bold">{{ property.bathrooms }}</div>
+                <small class="text-muted">Bathrooms</small>
+            </div>
+        </div>
+        {% if property.square_feet %}
+        <div class="col-6 col-md-3">
+            <div class="text-center">
+                <div class="fs-3 mb-2">📐</div>
+                <div class="fw-bold">{{ property.square_feet|floatformat:0 }}</div>
+                <small class="text-muted">Square Feet</small>
+            </div>
+        </div>
+        {% endif %}
+        <div class="col-6 col-md-3">
+            <div class="text-center">
+                <div class="fs-3 mb-2">🏠</div>
+                <div class="fw-bold">{{ property.get_property_type_display }}</div>
+                <small class="text-muted">Property Type</small>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
