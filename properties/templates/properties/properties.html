@@ -67,29 +67,64 @@
       </p>
   </div>
   {% endif %}
-</div>
 
-<!-- Properties Grid -->
-<div class="row">
+  <!-- Properties Grid -->
+  <div class="row g-4">
     {% for property in properties %}
-    <div class="col-md-4 mb-4">
-        <div class="card h-100">
-            <img src="{{ property.image.url }}" class="card-img-top" alt="{{ property.title }}" style="height: 300px; object-fit:cover">
-            <div class="card-body">
-                <h5 class="card-title">{{ property.title }}</h5>
-                <p class="card-text text-muted mb-1"><strong>Type:</strong> {{ property.get_property_type_display }}</p>
-                <p class="card-text text-muted mb-1"><strong>Listing:</strong> {{ property.get_listing_type_display }}</p>
-                <p class="card-text"><strong>Price:</strong> ${{ property.price }}</p>
+    <div class="col-md-6 col-lg-4">
+        <div class="card property-card h-100 border-0 shadow-sm">
+            <div class="position-relative">
+                <img src="{{ property.image.url }}" class="card-img-top" alt="{{ property.title }}" 
+                      style="height: 250px; object-fit: cover;">
+                <span class="badge bg-primary position-absolute top-0 start-0 m-3">
+                    {{ property.get_listing_type_display }}
+                </span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-3">
+                    {{ property.get_property_type_display }}
+                </span>
             </div>
-            <div class="card-footer d-flex gap-2">
-                <a href="{% url 'properties:property_detail' property.pk %}" class="btn btn-primary w-100 flex-fill">View Details</a>
-                <a href="{% url 'properties:contact' property.pk %}" class="btn btn-outline-success w-100 flex-fill">Inquire Property</a>
+            <div class="card-body">
+                <h5 class="card-title fw-bold mb-3">{{ property.title }}</h5>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted small">📍 {{ property.location }}</span>
+                    <span class="fw-bold text-primary fs-5">${{ property.price|floatformat:0 }}</span>
+                </div>
+                <div class="property-features d-flex gap-3 mb-3">
+                    <small class="text-muted">🛏️ {{ property.bedrooms }} Beds</small>
+                    <small class="text-muted">🚿 {{ property.bathrooms }} Baths</small>
+                    {% if property.square_feet %}
+                    <small class="text-muted">📐 {{ property.square_feet|floatformat:0 }} sqft</small>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <div class="d-grid gap-2">
+                    <a href="{% url 'properties:property_detail' property.pk %}" class="btn btn-outline-primary">
+                        View Details
+                    </a>
+                    <a href="{% url 'properties:contact' property.pk %}" class="btn btn-success">
+                        Inquire Now
+                    </a>
+                </div>
             </div>
         </div>
     </div>
     {% empty %}
-    <p class="text-center">No properties found.</p>
+    <div class="col-12">
+        <div class="text-center py-5">
+            <div class="mb-4">
+                <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-muted">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </div>
+            <h4 class="mb-3">No Properties Found</h4>
+            <p class="text-muted mb-4">Try adjusting your filters to see more results</p>
+            <a href="?" class="btn btn-primary">Clear All Filters</a>
+        </div>
+    </div>
     {% endfor %}
+  </div>
 </div>
 
 <!-- Pagination -->
