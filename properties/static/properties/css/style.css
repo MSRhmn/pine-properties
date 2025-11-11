@@ -86,6 +86,49 @@ main {
   border-radius: 20px;
 }
 
+/* Property Detail Page */
+.property-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.property-image-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.property-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.features-section {
+  border: 1px solid #e5e7eb;
+}
+
+.features-section .fs-3 {
+  line-height: 1;
+}
+
+.contact-card {
+  transition: transform 0.3s ease;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: #6c757d;
+}
+
+/* Details Section */
+.details-section .border-bottom {
+  border-color: #e5e7eb !important;
+}
+
 /* Primary buttons */
 .btn-primary {
   background-color: #3867d6 !important;
