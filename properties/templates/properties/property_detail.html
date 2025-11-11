@@ -83,5 +83,50 @@
     <h5 class="fw-bold mb-3">About This Property</h5>
     <p class="text-muted lh-lg">{{ property.description }}</p>
   </div>
+
+  <!-- Property Details -->
+  <div class="details-section bg-light p-4 rounded-3 mb-4">
+    <h5 class="fw-bold mb-3">Property Details</h5>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="d-flex justify-content-between border-bottom pb-2">
+                <span class="text-muted">Property Type:</span>
+                <span class="fw-semibold">{{ property.get_property_type_display }}</span>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="d-flex justify-content-between border-bottom pb-2">
+                <span class="text-muted">Listing Type:</span>
+                <span class="fw-semibold">{{ property.get_listing_type_display }}</span>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="d-flex justify-content-between border-bottom pb-2">
+                <span class="text-muted">Bedrooms:</span>
+                <span class="fw-semibold">{{ property.bedrooms }}</span>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="d-flex justify-content-between border-bottom pb-2">
+                <span class="text-muted">Bathrooms:</span>
+                <span class="fw-semibold">{{ property.bathrooms }}</span>
+            </div>
+        </div>
+        {% if property.square_feet %}
+        <div class="col-md-6 mb-3">
+            <div class="d-flex justify-content-between border-bottom pb-2">
+                <span class="text-muted">Square Feet:</span>
+                <span class="fw-semibold">{{ property.square_feet|floatformat:0 }} sqft</span>
+            </div>
+        </div>
+        {% endif %}
+        <div class="col-md-6 mb-3">
+            <div class="d-flex justify-content-between border-bottom pb-2">
+                <span class="text-muted">Listed On:</span>
+                <span class="fw-semibold">{{ property.date_listed|date:"M d, Y" }}</span>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
