@@ -125,28 +125,42 @@
     </div>
     {% endfor %}
   </div>
+
+  <!-- Pagination -->
+  {% if properties.has_other_pages %}
+  <nav aria-label="Page navigation" class="mt-5">
+      <ul class="pagination justify-content-center">
+          {% if properties.has_previous %}
+          <li class="page-item">
+              <a class="page-link" href="?page={{ properties.previous_page_number }}{% if request.GET.property_type %}&property_type={{ request.GET.property_type }}{% endif %}{% if request.GET.listing_type %}&listing_type={{ request.GET.listing_type }}{% endif %}{% if request.GET.location %}&location={{ request.GET.location }}{% endif %}">
+                  ← Previous
+              </a>
+          </li>
+          {% endif %}
+
+          {% for num in properties.paginator.page_range %}
+          {% if properties.number == num %}
+          <li class="page-item active">
+              <span class="page-link">{{ num }}</span>
+          </li>
+          {% elif num > properties.number|add:'-3' and num < properties.number|add:'3' %}
+          <li class="page-item">
+              <a class="page-link" href="?page={{ num }}{% if request.GET.property_type %}&property_type={{ request.GET.property_type }}{% endif %}{% if request.GET.listing_type %}&listing_type={{ request.GET.listing_type }}{% endif %}{% if request.GET.location %}&location={{ request.GET.location }}{% endif %}">
+                  {{ num }}
+              </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+
+          {% if properties.has_next %}
+          <li class="page-item">
+              <a class="page-link" href="?page={{ properties.next_page_number }}{% if request.GET.property_type %}&property_type={{ request.GET.property_type }}{% endif %}{% if request.GET.listing_type %}&listing_type={{ request.GET.listing_type }}{% endif %}{% if request.GET.location %}&location={{ request.GET.location }}{% endif %}">
+                  Next →
+              </a>
+          </li>
+          {% endif %}
+      </ul>
+  </nav>
+  {% endif %}
 </div>
-
-<!-- Pagination -->
-{% if properties.has_other_pages %}
-<nav aria-label="Page navigation">
-  <ul class="pagination justify-content-center">
-    {% if properties.has_previous %}
-      <li class="page-item"><a class="page-link" href="?page={{ properties.previous_page_number }}">Previous</a></li>
-    {% endif %}
-
-    {% for num in properties.paginator.page_range %}
-      {% if properties.number == num %}
-        <li class="page-item active"><span class="page-link">{{ num }}</span></li>
-      {% else %}
-        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
-      {% endif %}
-    {% endfor %}
-
-    {% if properties.has_next %}
-      <li class="page-item"><a class="page-link" href="?page={{ properties.next_page_number }}">Next</a></li>
-    {% endif %}
-  </ul>
-</nav>
-{% endif %}
 {% endblock %}
