@@ -10,19 +10,80 @@
     <p class="text-muted">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
   </div>
 
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form method="post" class="shadow p-4 rounded bg-light">
-                {% csrf_token %}
-                
-                <!-- Render the form fields with Bootstrap styling -->
-                {{ form.as_p }}
-                
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
-                </div>
-            </form>
+  <div class="row g-4">
+    <!-- Contact Form -->
+    <div class="col-lg-7">
+        {% if related_property %}
+        <div class="alert alert-info d-flex align-items-start mb-4">
+            <div class="flex-shrink-0 me-3">
+                <span class="fs-3">🏠</span>
+            </div>
+            <div>
+                <h6 class="alert-heading fw-bold mb-1">Property Inquiry</h6>
+                <p class="mb-1"><strong>{{ related_property.title }}</strong></p>
+                <small class="text-muted">
+                    ${{ related_property.price|floatformat:0 }} • {{ related_property.location }}
+                </small>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="mb-4">
+                        <label for="id_name" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                        {{ form.name }}
+                        {% if form.name.errors %}
+                        <div class="text-danger small mt-1">{{ form.name.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="id_email" class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                        <div class="text-danger small mt-1">{{ form.email.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="id_phone" class="form-label fw-semibold">Phone Number</label>
+                        {{ form.phone }}
+                        <small class="form-text text-muted">Optional - We'll call you back if provided</small>
+                        {% if form.phone.errors %}
+                        <div class="text-danger small mt-1">{{ form.phone.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="id_message" class="form-label fw-semibold">Message <span class="text-danger">*</span></label>
+                        {{ form.message }}
+                        {% if form.message.errors %}
+                        <div class="text-danger small mt-1">{{ form.message.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            📧 Send Message
+                        </button>
+                    </div>
+
+                    {% if related_property %}
+                    <div class="text-center">
+                        <a href="{% url 'properties:property_detail' related_property.pk %}" class="btn btn-outline-secondary">
+                            ← Back to Property
+                        </a>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
         </div>
     </div>
+
+  </div>
 </div>
 {% endblock %}
