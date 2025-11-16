@@ -129,7 +129,22 @@ main {
   border-color: #e5e7eb !important;
 }
 
-/* Primary buttons */
+/* Modern Global Button Style - Keeps Your Brand Colors */
+.btn {
+  border-radius: 10px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary - Your Blue */
 .btn-primary {
   background-color: #3867d6 !important;
   border-color: #3867d6 !important;
@@ -137,35 +152,23 @@ main {
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #0a3d62 !important;
-  border-color: #0a3d62 !important;
+  background-color: #2852b8 !important;
+  border-color: #2852b8 !important;
 }
 
+/* Success - Your Teal */
 .btn-success {
   background-color: #38ada9 !important;
   border-color: #38ada9 !important;
 }
 
-/* Success buttons */
 .btn-success:hover,
 .btn-success:focus {
-  background-color: #079992 !important;
-  border-color: #079992 !important;
+  background-color: #2d8a86 !important;
+  border-color: #2d8a86 !important;
 }
 
-.btn-outline-success {
-  color: #38ada9 !important;
-  border-color: #38ada9 !important;
-}
-
-.btn-outline-success:hover,
-.btn-outline-success:focus {
-  background-color: #38ada9 !important;
-  border-color: #38ada9 !important;
-  color: #fff !important;
-}
-
-/* Secondary Buttons */
+/* Secondary - Your Gray */
 .btn-secondary {
   background-color: #576574 !important;
   border-color: #576574 !important;
@@ -173,8 +176,44 @@ main {
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background-color: #2d3436 !important;
-  border-color: #2d3436 !important;
+  background-color: #3d4954 !important;
+  border-color: #3d4954 !important;
+}
+
+/* Outline Primary */
+.btn-outline-primary {
+  color: #3867d6 !important;
+  border: 2px solid #3867d6 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3867d6 !important;
+  color: #fff !important;
+}
+
+/* Outline Success */
+.btn-outline-success {
+  color: #38ada9 !important;
+  border: 2px solid #38ada9 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-success:hover {
+  background-color: #38ada9 !important;
+  color: #fff !important;
+}
+
+/* Outline Secondary */
+.btn-outline-secondary {
+  color: #576574 !important;
+  border: 2px solid #576574 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #576574 !important;
+  color: #fff !important;
 }
 
 /* Pagination - Match Primary Theme */
