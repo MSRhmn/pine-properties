@@ -45,6 +45,19 @@ class Property(models.Model):
                 pass  # Ignore errors, just save without resizing
 
 
+# Multiple image gallery model
+class PropertyImage(models.Model):
+    property_obj = models.ForeignKey(
+        Property, on_delete=models.CASCADE, related_name="images"
+    )
+    image = models.ImageField(upload_to="properties/")
+    order = models.PositiveIntegerField(default=0)
+    is_primary = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["order"]
+
+
 class Inquiry(models.Model):
     STATUS_CHOICES = [
         ("new", "New"),
