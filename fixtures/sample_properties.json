@@ -88,5 +88,59 @@
     "is_available": true,
     "date_listed": "2025-01-01T00:00:00Z"
   }
+},
+{
+  "model": "properties.property",
+  "pk": 7,
+  "fields": {
+    "title": "The Serene Lakeside Retreat",
+    "property_type": "house",
+    "listing_type": "rent",
+    "location": "Lakeview Estates, Willow Creek",
+    "description": "This stunning lakeside home offers unparalleled tranquility and breathtaking views. Featuring 4 bedrooms, 3 bathrooms, a gourmet kitchen, and expansive outdoor living spaces perfect for entertaining. Enjoy direct lake access and a private dock.",
+    "price": "850000.00",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "square_feet": null,
+    "image": "properties/Gemini_Generated_Image_osqs96osqs96osqs.png",
+    "is_available": true,
+    "date_listed": "2025-10-07T04:38:00.124Z"
+  }
+},
+{
+  "model": "properties.property",
+  "pk": 8,
+  "fields": {
+    "title": "Urban Loft Living",
+    "property_type": "condo",
+    "listing_type": "rent",
+    "location": "Downtown Arts District, Metro City",
+    "description": "Experience vibrant city life in this stylish 2-bedroom, 2-bathroom urban loft. Boasting high ceilings, exposed brick, large windows with city views, and modern amenities. Steps away from the best restaurants, galleries, and nightlife.",
+    "price": "525000.00",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": null,
+    "image": "properties/Gemini_Generated_Image_927elx927elx927e.png",
+    "is_available": true,
+    "date_listed": "2025-10-07T04:39:24.431Z"
+  }
+},
+{
+  "model": "properties.property",
+  "pk": 9,
+  "fields": {
+    "title": "Suburban Family Home",
+    "property_type": "house",
+    "listing_type": "rent",
+    "location": "Oakwood Trails, Greenfield",
+    "description": "A charming and spacious 3-bedroom, 2.5-bathroom family home located in a quiet, family-friendly suburban neighborhood. Includes a large backyard, updated kitchen, and a cozy fireplace. Excellent schools and parks are just a short walk away.",
+    "price": "399900.00",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": null,
+    "image": "properties/Gemini_Generated_Image_txdfgatxdfgatxdf.png",
+    "is_available": true,
+    "date_listed": "2025-10-07T04:40:30.997Z"
+  }
 }
 ]
