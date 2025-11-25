@@ -12,6 +12,7 @@ class PropertyImageInline(admin.TabularInline):
 
 @admin.register(Property)
 class PropertyAdmin(admin.ModelAdmin):
+    inlines = [PropertyImageInline]
     list_display = (
         "title",
         "location",
