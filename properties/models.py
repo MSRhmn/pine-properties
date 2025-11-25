@@ -31,6 +31,10 @@ class Property(models.Model):
     is_available = models.BooleanField(default=True)
     date_listed = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        verbose_name_plural = "Properties"
+        ordering = [-date_listed]
+
     def __str__(self):
         return self.title
 
