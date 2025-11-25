@@ -7,7 +7,7 @@ from .models import Property, Inquiry, PropertyImage
 class PropertyImageInline(admin.TabularInline):
     model = PropertyImage
     extra = 3
-    fileds = ("image", "order", "is_primary")
+    fields = ("image", "order", "is_primary")
 
 
 @admin.register(Property)
