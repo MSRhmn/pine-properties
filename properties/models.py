@@ -33,7 +33,7 @@ class Property(models.Model):
 
     class Meta:
         verbose_name_plural = "Properties"
-        ordering = [-date_listed]
+        ordering = ["-date_listed"]
 
     def __str__(self):
         return self.title
