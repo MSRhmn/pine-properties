@@ -18,7 +18,7 @@ class Property(models.Model):
     ]
 
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=250, unique=True, blank=True, null=True)
+    slug = models.SlugField(max_length=250, unique=True, blank=True)
     property_type = models.CharField(max_length=20, choices=PROPERTY_TYPES)
     listing_type = models.CharField(max_length=10, choices=LISTING_TYPES)
     location = models.CharField(max_length=200)
