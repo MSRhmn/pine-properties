@@ -66,6 +66,9 @@ class PropertyImage(models.Model):
     class Meta:
         ordering = ["order"]
 
+    def __str__(self):
+        return f"Image {self.order} for {self.property_obj.title}"
+
 
 class Inquiry(models.Model):
     STATUS_CHOICES = [
