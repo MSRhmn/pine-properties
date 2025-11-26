@@ -92,6 +92,7 @@ class Inquiry(models.Model):
 
     class Meta:
         ordering = ["-submitted_at"]
+        verbose_name_plural = "Inquiries"
 
     def __str__(self):
         if self.property_obj:
