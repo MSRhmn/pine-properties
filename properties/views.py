@@ -61,8 +61,8 @@ def properties(request):
     return render(request, "properties/properties.html", context)
 
 
-def property_detail(request, pk):
-    property = get_object_or_404(Property, pk=pk)
+def property_detail(request, slug):
+    property = get_object_or_404(Property, slug=slug)
     return render(request, "properties/property_detail.html", {"property": property})
 
 
