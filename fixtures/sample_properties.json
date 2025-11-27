@@ -1,146 +1,154 @@
 [
-{
-  "model": "properties.property",
-  "pk": 2,
-  "fields": {
-    "title": "Charming Cottage in the Heart of Old Town",
-    "property_type": "house",
-    "listing_type": "rent",
-    "location": "123 Main Street, Old Town, Anytown, USA",
-    "description": "This delightful two-bedroom cottage offers a peaceful retreat in the heart of Old Town. With its cozy living room, updated kitchen, and charming backyard, this home is perfect for those seeking a quiet and comfortable lifestyle.",
-    "price": "350000.00",
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_egslw0egslw0egsl.jpeg",
-    "is_available": true,
-    "date_listed": "2025-01-01T00:00:00Z"
+  {
+    "model": "properties.property",
+    "pk": 2,
+    "fields": {
+      "title": "Charming Cottage in the Heart of Old Town",
+      "slug": "charming-cottage-in-the-heart-of-old-town",
+      "property_type": "house",
+      "listing_type": "rent",
+      "location": "123 Main Street, Old Town, Anytown, USA",
+      "description": "This delightful two-bedroom cottage offers a peaceful retreat in the heart of Old Town. With its cozy living room, updated kitchen, and charming backyard, this home is perfect for those seeking a quiet and comfortable lifestyle.",
+      "price": "350000.00",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_egslw0egslw0egsl.jpeg",
+      "is_available": true,
+      "date_listed": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "properties.property",
+    "pk": 3,
+    "fields": {
+      "title": "Modern Farmhouse with Acreage",
+      "slug": "modern-farmhouse-with-acreage",
+      "property_type": "house",
+      "listing_type": "sale",
+      "location": "456 Country Road, Ruralville, Anystate, USA",
+      "description": "This stunning modern farmhouse offers the perfect blend of rustic charm and contemporary style. Situated on a spacious 5-acre lot, the property features beautiful landscaping, a pool, and a detached garage.",
+      "price": "750000.00",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_egslw1egslw1egsl.jpeg",
+      "is_available": true,
+      "date_listed": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "properties.property",
+    "pk": 4,
+    "fields": {
+      "title": "Penthouse Suite with City Views",
+      "slug": "penthouse-suite-with-city-views",
+      "property_type": "house",
+      "listing_type": "sale",
+      "location": "789 Tower Drive, City Center, Anycity, USA",
+      "description": "This luxurious penthouse suite offers breathtaking panoramic views of the city skyline. With high-end finishes, gourmet kitchen, and private balcony, this is the ultimate urban retreat.",
+      "price": "2000000.00",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_iv144eiv144eiv14.jpeg",
+      "is_available": true,
+      "date_listed": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "properties.property",
+    "pk": 5,
+    "fields": {
+      "title": "Modern Family Home",
+      "slug": "modern-family-home",
+      "property_type": "house",
+      "listing_type": "sale",
+      "location": "123 Green Valley Drive, Suburbia, USA",
+      "description": "This stunning modern home offers spacious living with an open-concept design, four bedrooms, three bathrooms, and a two-car garage. Enjoy the beautifully landscaped garden and a private backyard perfect for entertaining. Located in a family-friendly neighborhood with excellent schools and amenities nearby.",
+      "price": "750000.00",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_5254qn5254qn5254_XclF8EB_mTs9eDE_ffXyFhd.png",
+      "is_available": true,
+      "date_listed": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "properties.property",
+    "pk": 6,
+    "fields": {
+      "title": "Cozy City Apartment",
+      "slug": "cozy-city-apartment",
+      "property_type": "condo",
+      "listing_type": "sale",
+      "location": "Apt 4B, 456 Urban Loft Building, Metropolis, USA",
+      "description": "Discover comfort and style in this charming one-bedroom, one-bathroom apartment. Featuring abundant natural light, a cozy living area, and a modern kitchen. Ideal for singles or couples, this unit is situated in the heart of the city, close to public transport, vibrant nightlife, and dining options.",
+      "price": "350000.00",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_5254qm5254qm5254.png",
+      "is_available": true,
+      "date_listed": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "properties.property",
+    "pk": 7,
+    "fields": {
+      "title": "The Serene Lakeside Retreat",
+      "slug": "the-serene-lakeside-retreat",
+      "property_type": "house",
+      "listing_type": "rent",
+      "location": "Lakeview Estates, Willow Creek",
+      "description": "This stunning lakeside home offers unparalleled tranquility and breathtaking views. Featuring 4 bedrooms, 3 bathrooms, a gourmet kitchen, and expansive outdoor living spaces perfect for entertaining. Enjoy direct lake access and a private dock.",
+      "price": "850000.00",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_osqs96osqs96osqs.png",
+      "is_available": true,
+      "date_listed": "2025-10-07T04:38:00.124Z"
+    }
+  },
+  {
+    "model": "properties.property",
+    "pk": 8,
+    "fields": {
+      "title": "Urban Loft Living",
+      "slug": "urban-loft-living",
+      "property_type": "condo",
+      "listing_type": "rent",
+      "location": "Downtown Arts District, Metro City",
+      "description": "Experience vibrant city life in this stylish 2-bedroom, 2-bathroom urban loft. Boasting high ceilings, exposed brick, large windows with city views, and modern amenities. Steps away from the best restaurants, galleries, and nightlife.",
+      "price": "525000.00",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_927elx927elx927e.png",
+      "is_available": true,
+      "date_listed": "2025-10-07T04:39:24.431Z"
+    }
+  },
+  {
+    "model": "properties.property",
+    "pk": 9,
+    "fields": {
+      "title": "Suburban Family Home",
+      "slug": "suburban-family-home",
+      "property_type": "house",
+      "listing_type": "rent",
+      "location": "Oakwood Trails, Greenfield",
+      "description": "A charming and spacious 3-bedroom, 2.5-bathroom family home located in a quiet, family-friendly suburban neighborhood. Includes a large backyard, updated kitchen, and a cozy fireplace. Excellent schools and parks are just a short walk away.",
+      "price": "399900.00",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_feet": null,
+      "image": "properties/Gemini_Generated_Image_txdfgatxdfgatxdf.png",
+      "is_available": true,
+      "date_listed": "2025-10-07T04:40:30.997Z"
+    }
   }
-},
-{
-  "model": "properties.property",
-  "pk": 3,
-  "fields": {
-    "title": "Modern Farmhouse with Acreage",
-    "property_type": "house",
-    "listing_type": "sale",
-    "location": "456 Country Road, Ruralville, Anystate, USA",
-    "description": "This stunning modern farmhouse offers the perfect blend of rustic charm and contemporary style. Situated on a spacious 5-acre lot, the property features beautiful landscaping, a pool, and a detached garage.",
-    "price": "750000.00",
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_egslw1egslw1egsl.jpeg",
-    "is_available": true,
-    "date_listed": "2025-01-01T00:00:00Z"
-  }
-},
-{
-  "model": "properties.property",
-  "pk": 4,
-  "fields": {
-    "title": "Penthouse Suite with City Views",
-    "property_type": "house",
-    "listing_type": "sale",
-    "location": "789 Tower Drive, City Center, Anycity, USA",
-    "description": "This luxurious penthouse suite offers breathtaking panoramic views of the city skyline. With high-end finishes, gourmet kitchen, and private balcony, this is the ultimate urban retreat.",
-    "price": "2000000.00",
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_iv144eiv144eiv14.jpeg",
-    "is_available": true,
-    "date_listed": "2025-01-01T00:00:00Z"
-  }
-},
-{
-  "model": "properties.property",
-  "pk": 5,
-  "fields": {
-    "title": "Modern Family Home",
-    "property_type": "house",
-    "listing_type": "sale",
-    "location": "123 Green Valley Drive, Suburbia, USA",
-    "description": "This stunning modern home offers spacious living with an open-concept design, four bedrooms, three bathrooms, and a two-car garage. Enjoy the beautifully landscaped garden and a private backyard perfect for entertaining. Located in a family-friendly neighborhood with excellent schools and amenities nearby.",
-    "price": "750000.00",
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_5254qn5254qn5254_XclF8EB_mTs9eDE_ffXyFhd.png",
-    "is_available": true,
-    "date_listed": "2025-01-01T00:00:00Z"
-  }
-},
-{
-  "model": "properties.property",
-  "pk": 6,
-  "fields": {
-    "title": "Cozy City Apartment",
-    "property_type": "condo",
-    "listing_type": "sale",
-    "location": "Apt 4B, 456 Urban Loft Building, Metropolis, USA",
-    "description": "Discover comfort and style in this charming one-bedroom, one-bathroom apartment. Featuring abundant natural light, a cozy living area, and a modern kitchen. Ideal for singles or couples, this unit is situated in the heart of the city, close to public transport, vibrant nightlife, and dining options.",
-    "price": "350000.00",
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_5254qm5254qm5254.png",
-    "is_available": true,
-    "date_listed": "2025-01-01T00:00:00Z"
-  }
-},
-{
-  "model": "properties.property",
-  "pk": 7,
-  "fields": {
-    "title": "The Serene Lakeside Retreat",
-    "property_type": "house",
-    "listing_type": "rent",
-    "location": "Lakeview Estates, Willow Creek",
-    "description": "This stunning lakeside home offers unparalleled tranquility and breathtaking views. Featuring 4 bedrooms, 3 bathrooms, a gourmet kitchen, and expansive outdoor living spaces perfect for entertaining. Enjoy direct lake access and a private dock.",
-    "price": "850000.00",
-    "bedrooms": 4,
-    "bathrooms": 4,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_osqs96osqs96osqs.png",
-    "is_available": true,
-    "date_listed": "2025-10-07T04:38:00.124Z"
-  }
-},
-{
-  "model": "properties.property",
-  "pk": 8,
-  "fields": {
-    "title": "Urban Loft Living",
-    "property_type": "condo",
-    "listing_type": "rent",
-    "location": "Downtown Arts District, Metro City",
-    "description": "Experience vibrant city life in this stylish 2-bedroom, 2-bathroom urban loft. Boasting high ceilings, exposed brick, large windows with city views, and modern amenities. Steps away from the best restaurants, galleries, and nightlife.",
-    "price": "525000.00",
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_927elx927elx927e.png",
-    "is_available": true,
-    "date_listed": "2025-10-07T04:39:24.431Z"
-  }
-},
-{
-  "model": "properties.property",
-  "pk": 9,
-  "fields": {
-    "title": "Suburban Family Home",
-    "property_type": "house",
-    "listing_type": "rent",
-    "location": "Oakwood Trails, Greenfield",
-    "description": "A charming and spacious 3-bedroom, 2.5-bathroom family home located in a quiet, family-friendly suburban neighborhood. Includes a large backyard, updated kitchen, and a cozy fireplace. Excellent schools and parks are just a short walk away.",
-    "price": "399900.00",
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "square_feet": null,
-    "image": "properties/Gemini_Generated_Image_txdfgatxdfgatxdf.png",
-    "is_available": true,
-    "date_listed": "2025-10-07T04:40:30.997Z"
-  }
-}
 ]
