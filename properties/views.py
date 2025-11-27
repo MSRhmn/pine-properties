@@ -66,12 +66,12 @@ def property_detail(request, slug):
     return render(request, "properties/property_detail.html", {"property": property})
 
 
-def contact(request, property_id=None):
+def contact(request, slug=None):
     """Handles both general contact and property-specific inquiries."""
     related_property = None
 
-    if property_id:
-        related_property = get_object_or_404(Property, id=property_id)
+    if slug:
+        related_property = get_object_or_404(Property, slug=slug)
 
     if request.method == "POST":
         form = ContactForm(request.POST)
