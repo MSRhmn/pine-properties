@@ -85,10 +85,10 @@
               </div>
               <div class="card-footer bg-transparent border-0 pb-3">
                   <div class="d-grid gap-2">
-                      <a href="{% url 'properties:property_detail' property.pk %}" class="btn btn-outline-primary">
+                      <a href="{% url 'properties:property_detail' property.slug %}" class="btn btn-outline-primary">
                           View Details
                       </a>
-                      <a href="{% url 'properties:contact' property.pk %}" class="btn btn-success">
+                      <a href="{% url 'properties:contact' property.slug %}" class="btn btn-success">
                           Inquire Now
                       </a>
                   </div>
